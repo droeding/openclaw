@@ -1,0 +1,15 @@
+{
+  "name": "@openclaw/memory-lancedb-ollama",
+  "version": "1.0.0",
+  "description": "LanceDB memory plugin with local Ollama embeddings - no API costs!",
+  "type": "module",
+  "main": "index.ts",
+  "keywords": ["openclaw", "plugin", "memory", "lancedb", "ollama", "embeddings", "local"],
+  "author": "BERT (Labor BERTA)",
+  "license": "MIT",
+  "peerDependencies": {
+    "openclaw": "*",
+    "@lancedb/lancedb": "*",
+    "@sinclair/typebox": "*"
+  }
+}

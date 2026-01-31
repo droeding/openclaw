@@ -1,0 +1,29 @@
+{
+  "id": "memory-lancedb-ollama",
+  "name": "Memory (LanceDB + Ollama)",
+  "description": "Long-term memory with local Ollama embeddings",
+  "version": "1.0.0",
+  "kind": "memory",
+  "main": "index.ts",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "embedding": {
+        "type": "object",
+        "properties": {
+          "provider": { "type": "string", "enum": ["ollama", "openai"], "default": "ollama" },
+          "model": { "type": "string", "default": "nomic-embed-text" },
+          "apiKey": { "type": "string" },
+          "ollamaUrl": { "type": "string", "default": "http://localhost:11434" }
+        },
+        "required": ["provider"]
+      },
+      "dbPath": { "type": "string" },
+      "autoCapture": { "type": "boolean", "default": true },
+      "autoRecall": { "type": "boolean", "default": true }
+    },
+    "required": ["embedding"]
+  },
+  "author": "BERT",
+  "license": "MIT"
+}
